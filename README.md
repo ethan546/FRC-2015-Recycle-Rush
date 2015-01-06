@@ -1,5 +1,6 @@
 FRC-2015-Recycle-Rush
 =====================
-Jason Zhao
+JASON ZHAO
 Shirin Amini
 Chris Xiong
+Omar Hussain
