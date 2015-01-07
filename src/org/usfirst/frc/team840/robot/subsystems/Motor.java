@@ -1,6 +1,7 @@
 package org.usfirst.frc.team840.robot.subsystems;
 
 import org.usfirst.frc.team840.robot.RobotMap;
+import org.usfirst.frc.team840.robot.commands.Stop;
 
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -19,7 +20,7 @@ public class Motor extends Subsystem {
     }
 
     public void initDefaultCommand() {
-        
+        setDefaultCommand(new Stop());
     }
     
     public void rotatePositive() {
