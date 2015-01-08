@@ -13,7 +13,7 @@ public class Stop extends Command {
 
     public Stop() {
         requires(Robot.motor);
-        setTimeout(1);
+        setTimeout(1);	//May or may not need
     }
 
     // Called just before this Command runs the first time
