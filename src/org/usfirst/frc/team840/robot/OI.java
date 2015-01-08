@@ -3,6 +3,7 @@ package org.usfirst.frc.team840.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
+import org.usfirst.frc.team840.robot.commands.RotateNegative;
 import org.usfirst.frc.team840.robot.commands.RotatePositive;
 
 /**
@@ -11,12 +12,15 @@ import org.usfirst.frc.team840.robot.commands.RotatePositive;
  */
 public class OI {
 	
-	private Joystick joy = new Joystick(0);
+	private Joystick joy0 = new Joystick(0);
+	private Joystick joy1 = new Joystick(1);
 	
 	public OI() {
-		JoystickButton trigger = new JoystickButton(joy, 1);
+		JoystickButton trigger0 = new JoystickButton(joy0, 1);
+		JoystickButton trigger1 = new JoystickButton(joy1, 1);
 		
-		trigger.whenPressed(new RotatePositive());
+		trigger0.whenPressed(new RotatePositive());
+		trigger1.whenPressed(new RotateNegative());
 	}
 }
 
