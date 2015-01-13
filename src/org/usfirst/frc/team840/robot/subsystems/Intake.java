@@ -29,4 +29,8 @@ public class Intake extends Subsystem {
         if (dir) rWheel.set(1);
         else rWheel.set(-1);
     }
+    public void stop() {
+        lWheel.set(0);
+        rWheel.set(0);
+    }
 }
