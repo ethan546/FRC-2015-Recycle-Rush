@@ -3,9 +3,7 @@ package org.usfirst.frc.team840.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.Talon;
 
-/**
- *
- */
+//some pseudocode for the intake system (2 wheels that spin in opposite directions to intake a tote)
 public class Intake extends Subsystem {
     
     // Put methods for controlling this subsystem
