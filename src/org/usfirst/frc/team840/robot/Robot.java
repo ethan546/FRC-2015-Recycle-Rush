@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import org.usfirst.frc.team840.robot.commands.ExampleCommand;
-import org.usfirst.frc.team840.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team840.robot.subsystems.Intake;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -17,7 +17,7 @@ import org.usfirst.frc.team840.robot.subsystems.ExampleSubsystem;
  */
 public class Robot extends IterativeRobot {
 
-	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final Intake intake = new Intake();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -27,14 +27,14 @@ public class Robot extends IterativeRobot {
      * used for any initialization code.
      */
     public void robotInit() {
-		oi = new OI();
+	oi = new OI();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
     }
 	
-	public void disabledPeriodic() {
-		Scheduler.getInstance().run();
-	}
+    public void disabledPeriodic() {
+	Scheduler.getInstance().run();
+    }
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
@@ -49,7 +49,7 @@ public class Robot extends IterativeRobot {
     }
 
     public void teleopInit() {
-		// This makes sure that the autonomous stops running when
+	// This makes sure that the autonomous stops running when
         // teleop starts running. If you want the autonomous to 
         // continue until interrupted by another command, remove
         // this line or comment it out.
